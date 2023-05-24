@@ -5,6 +5,10 @@ namespace Cookiss
 {
     class Program
     {
+        static void Mymethod()
+        {
+            Console.WriteLine("ENJOY YOUR COOKISS!");
+        }
         static void Main()
 
         {
@@ -21,11 +25,15 @@ namespace Cookiss
 
                 if (result == "correct")
                 {
-                    Console.WriteLine("What Cookies Do You Want?");
-                    Console.WriteLine("Enter 1 for Choco Cookies");
-                    Console.WriteLine("Enter 2 for Choco Oat Cookies");
-                    Console.WriteLine("Enter 3 for Supreme Cookies");
-                    Console.WriteLine("Enter 0 to exit");
+                    var menu = new List<string>()
+                        { "What Cookies Do You Want?","Enter 1 for Choco Cookies","Enter 2 for Choco Oat Cookies",
+                            "Enter 3 for Supreme Cookies","Enter 0 to exit"};
+
+                        foreach (string i in menu)
+                        {
+                        Console.WriteLine(i);
+                        }
+               
                     enterChoice = Console.ReadLine();
 
                     switch (enterChoice)
@@ -47,6 +55,7 @@ namespace Cookiss
                             int chocolate = 15 * numCookies;
                             int nuts = 8 * numCookies;
                             int raisins = 8 * numCookies;
+
                             Console.WriteLine("Ingredients");
                             Console.WriteLine("Butter = " + butter + " grams");
                             Console.WriteLine("Dark or Light Brown Sugar = " + sugar + " grams");
@@ -58,9 +67,11 @@ namespace Cookiss
                             Console.WriteLine("Baking Soda = " + soda + " grams");
                             Console.WriteLine("Chocolate Chip or Bar = " + chocolate + "grams");
                             Console.WriteLine("    ");
+                            Mymethod();
                             Console.WriteLine("    ");
 
                             Console.WriteLine("Enter 1 to Return");
+                            Console.WriteLine("Enter 0 to Exit");
                             
                             enterChoice = Console.ReadLine();
                             break;
@@ -94,9 +105,11 @@ namespace Cookiss
                             Console.WriteLine("Baking Soda = " + soda + " grams");
                             Console.WriteLine("Chocolate Chip or Bar = " + chocolate + "grams");
                             Console.WriteLine("    ");
+                            Mymethod();
                             Console.WriteLine("    ");
                             Console.WriteLine("Enter 1 to return");
-                           
+                            Console.WriteLine("Enter 0 to Exit");
+
                             enterChoice = Console.ReadLine();
                             break;
 
@@ -131,9 +144,11 @@ namespace Cookiss
                             Console.WriteLine("Nuts = " + nuts + " grams");
                             Console.WriteLine("Raisins = " + raisins + " grams");
                             Console.WriteLine("    ");
+                            Mymethod();
                             Console.WriteLine("    ");
                             Console.WriteLine("Enter 1 to return");
-                            
+                            Console.WriteLine("Enter 0 to Exit");
+
                             enterChoice = Console.ReadLine();
                             break;
                         default:
